@@ -4,8 +4,6 @@ A convolutional neural network, built from scratch in Python with TensorFlow/Ker
 
 **Result: 95.0% accuracy on a held-out test set of 11,992 images**, up from a ~50% baseline.
 
-Built for CSE 5717 at the University of Connecticut (Spring 2026) by Team 2: Yasin Ahmed, Kaiye Liu, and Tyler Rimkunas. Tyler built the model and the Grad-CAM analysis.
-
 ---
 
 ## Why

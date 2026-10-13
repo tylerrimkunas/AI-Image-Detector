@@ -2,7 +2,7 @@
 
 A convolutional neural network, built from scratch in Python with TensorFlow/Keras, that classifies images as **AI-generated** or **human-made**, with **Grad-CAM** heatmaps to explain what the model looks at.
 
-**Result: 95.0% accuracy on a held-out test set of 11,992 images**, up from a ~50% baseline.
+**Result: 95.0% accuracy on a held-out test set of 11,992 images.**
 
 ---
 
@@ -12,7 +12,7 @@ AI image generators now produce images most people can't tell apart from real ph
 
 ## Dataset
 
-[AI vs. Human-Generated Images](https://www.kaggle.com/datasets/alessandrasala79/ai-vs-human-generated-dataset) (Kaggle). The human images come from Shutterstock across many categories, and each one is paired with an AI-generated counterpart.
+[AI vs. Human-Generated Images](https://www.kaggle.com/datasets/alessandrasala79/ai-vs-human-generated-dataset/data) (Kaggle). The human images come from Shutterstock across many categories, and each one is paired with an AI-generated counterpart.
 
 The dataset's own test folder has no labels, so we used only the 79,950 labeled training images and split them ourselves, keeping each split balanced 50/50 between the two classes:
 
@@ -59,14 +59,6 @@ A five-block CNN with about 1.0M parameters (3.83 MB):
 | --- | ---: | ---: |
 | **Actual human** | 5,510 | 486 |
 | **Actual AI** | 178 | 5,818 |
-
-**Compared with the baseline:** our first attempt used a scikit-learn SGD classifier on 28×28 grayscale images flattened into vectors. Flattening throws away spatial structure, and it scored near random.
-
-| Metric | Baseline (SGD) | Final CNN |
-| --- | :---: | :---: |
-| Precision (AI) | 0.51 | 0.92 |
-| Recall (AI) | 0.64 | 0.97 |
-| Accuracy | ~50% | 95.0% |
 
 ## Explaining the model with Grad-CAM
 

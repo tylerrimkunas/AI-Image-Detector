@@ -74,6 +74,12 @@ We then ran it over the model's mistakes:
 - **False positives** (human images called AI) were mostly heavily edited drawings and digital graphic design, which share the smooth, artifact-like look of generated images. Missing shadows also seemed to push predictions toward AI.
 - **False negatives** (AI images called human) included a portrait where the model focused on the face, and natural-looking shadows appeared to convince it the image was real.
 
+<p align="center">
+  <img src="images/false_negative_gradcam.png" alt="An AI-generated portrait of a woman looking at her phone (top) and its Grad-CAM heatmap (bottom). The model gave it only an 18.5% probability of being AI, and the heatmap concentrates on her face and hair." width="300">
+  <br>
+  <em>False negative: an AI-generated image the model scored as only 18.5% likely to be AI. The Grad-CAM heatmap (bottom) shows it focused mainly on the face.</em>
+</p>
+
 ## Repository contents
 
 | File | Description |

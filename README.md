@@ -72,6 +72,12 @@ We then ran it over the model's mistakes:
 
 - **Heatmaps on correct predictions** concentrate on edges and fine textures. This suggests the model learned low-level generation artifacts rather than relying on what the image depicts.
 - **False positives** (human images called AI) were mostly heavily edited drawings and digital graphic design, which share the smooth, artifact-like look of generated images. Missing shadows also seemed to push predictions toward AI.
+
+<p align="center">
+  <img src="images/false_positive_gradcam.png" alt="Three human-made images, an autumn leaf scene and two flower frames, shown above their Grad-CAM heatmaps. The model scored them 51.8%, 97.6% and 60.2% likely to be AI." width="600">
+  <br>
+  <em>False positives: human-made images the model called AI (P(AI) = 0.518, 0.976, 0.602). All three are heavily edited designs with bright, flat backgrounds and no natural shadows.</em>
+</p>
 - **False negatives** (AI images called human) included a portrait where the model focused on the face, and natural-looking shadows appeared to convince it the image was real.
 
 <p align="center">
